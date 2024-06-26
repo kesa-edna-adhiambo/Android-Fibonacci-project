@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.recyclerview.widget.GridLayoutManager
 import com.example.fibonaccirecycleview.databinding.ActivityMainBinding
+import java.math.BigInteger
 
 class MainActivity : AppCompatActivity() {
     lateinit var binding: ActivityMainBinding
@@ -20,8 +21,8 @@ class MainActivity : AppCompatActivity() {
 
     }
 
-    fun numbers(numb: Int): List<Int>{
-        val myNum = mutableListOf(0,1)
+    fun numbers(numb: Int): List<BigInteger>{
+        val myNum = mutableListOf(BigInteger.ZERO,BigInteger.ONE)
         while(myNum.size < numb){
             myNum.add(myNum[myNum.lastIndex] + myNum[myNum.lastIndex - 1])
 
